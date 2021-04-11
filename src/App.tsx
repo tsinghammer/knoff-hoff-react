@@ -1,23 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { ButtonBar } from './controls/ButtonBar';
+import { ResultsTable } from './controls/ResultsTable';
+import { TableItem } from './controls/types';
+
+const items: TableItem[] = [
+  {
+    location: 'Here',
+    login: 'me',
+    name: "It's me",
+  },
+  {
+    location: 'Somewhere else',
+    login: 'you',
+    name: "It's you",
+  },
+];
 
 function App() {
+  const [itemsState, setItemsState] = useState(items);
+
+  const onButtonClick = (items: TableItem[]) => {
+    setItemsState(items);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ButtonBar onClick={onButtonClick} />
+        <ResultsTable items={itemsState} />
       </header>
     </div>
   );
