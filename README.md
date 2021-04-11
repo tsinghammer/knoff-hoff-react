@@ -1,3 +1,25 @@
+# Likron Knoff Hoff Example App
+
+## Required installs
+
+- Git
+- Node.js
+- yarn
+
+## IDE used
+
+- VS Code
+- (WebStorm)
+
+# Run example Application
+
+- git clone https://github.com/tsinghammer/knoff-hoff-react.git
+- `cd knoff-hoff-creact`
+- `yarn`
+- `yarn start`
+
+<br/>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
