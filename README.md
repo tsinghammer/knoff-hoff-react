@@ -14,7 +14,7 @@
 # Run example Application
 
 - git clone https://github.com/tsinghammer/knoff-hoff-react.git
-- `cd knoff-hoff-creact`
+- `cd knoff-hoff-react`
 - `yarn`
 - `yarn start`
 
